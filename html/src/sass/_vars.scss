@@ -1,0 +1,16 @@
+// ==================== Responsive breakpoint
+
+// Large responsive
+$min-large: 1200px;
+$min-middle: $min-large - 1;
+
+// Middle responsive
+$max-middle: 992px;
+$table-max: $max-middle -1;
+$table-max: 768px;
+
+// Small responsive
+$phone-max: $table-max - 1;
+$phone-min: 480px;
+$min-responsive: 320px;
+

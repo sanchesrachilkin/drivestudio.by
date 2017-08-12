@@ -1,0 +1,9 @@
+@import "_mixin.scss";
+@import "_vars.scss";
+
+
+@media only screen and (min-width: $min-large) {
+  div {
+    display: block;
+  }
+}
