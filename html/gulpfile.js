@@ -36,13 +36,17 @@ gulp.task('browserSync', function() {
     })
 });
 
-gulp.task('css-libs', ['sass'], function() {
-    return gulp.src('src/libs/**/*.css')
-        .pipe(cssnano())
-        .pipe(concat('libs.css'))
-        .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('src/css/libs'));
 
+gulp.task('scripts', function() {
+    return gulp.src([ // Берем все необходимые библиотеки
+        'src/libs/slick-carousel/slick/slick.js', // Slick
+        'src/libs/jQuery.dotdotdot/src/jquery.dotdotdot.js', // DOtDotDot
+        'src/libs/jquery-touchswipe/jquery.touchSwipe.js',
+        'src/libs/fancybox/dist/jquery.fancybox.js'
+    ])
+        .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
+        .pipe(uglify()) // Сжимаем JS файл
+        .pipe(gulp.dest('src/js/libs')); // Выгружаем в папку app/js
 });
 
 
@@ -50,7 +54,7 @@ gulp.task('clean', function() {
     return del.sync('dist');
 });
 
-gulp.task('watch',['browserSync', 'cleanCss', 'sass', 'css-libs' ], function () {
+gulp.task('watch',['browserSync', 'cleanCss', 'sass'], function () {
     gulp.watch('src/sass/**/*.scss', ['sass']);
     gulp.watch('src/**/*.html', browserSync.reload);
     gulp.watch('src/js/**/*.js', browserSync.reload);
@@ -68,7 +72,7 @@ gulp.task('img', function() {
 });
 
 
-gulp.task('build',['clean', 'img' , 'sass'], function() {
+gulp.task('build',['clean', 'img' , 'sass', 'scripts'], function() {
     var buildCss = gulp.src('src/css/**/*.css')
         .pipe(gulp.dest('dist/css'));
 
