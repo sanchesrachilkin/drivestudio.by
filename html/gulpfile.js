@@ -9,7 +9,10 @@ var gulp         = require('gulp'),
     cssnano      = require('gulp-cssnano'),
     rename       = require('gulp-rename'),
     del          = require('del'),
-    autoprefixer = require('gulp-autoprefixer');
+    autoprefixer = require('gulp-autoprefixer'),
+    cache        = require('gulp-cache'),
+    imagemin     = require('gulp-imagemin'),
+    pngquant     = require('imagemin-pngquant');
 
 
 gulp.task('cleanCss', function() {
@@ -53,7 +56,19 @@ gulp.task('watch',['browserSync', 'cleanCss', 'sass', 'css-libs' ], function () 
     gulp.watch('src/js/**/*.js', browserSync.reload);
 });
 
-gulp.task('build',['clean', 'sass'], function() {
+gulp.task('img', function() {
+    return gulp.src('src/images/**/*')
+        .pipe(cache(imagemin({
+            interlaced: true,
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        })))
+        .pipe(gulp.dest('dist/images')); // Выгружаем на продакшен
+});
+
+
+gulp.task('build',['clean', 'img' , 'sass'], function() {
     var buildCss = gulp.src('src/css/**/*.css')
         .pipe(gulp.dest('dist/css'));
 
@@ -66,3 +81,7 @@ gulp.task('build',['clean', 'sass'], function() {
     var buildjs = gulp.src('src/js/**/*')
         .pipe(gulp.dest('dist/js'));
 });
+
+gulp.task('clear', function (callback) {
+    return cache.clearAll();
+})

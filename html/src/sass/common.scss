@@ -1147,5 +1147,10 @@ div {
   }
 }
 
-
-//Font Awesome
+.load_slider {
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+  &.slick-initialized {
+    opacity: 1;
+  }
+}
