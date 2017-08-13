@@ -1,2 +1,168 @@
 @import "_mixin.scss";
 @import "_vars.scss";
+
+
+.header {
+  position: relative;
+  height: 120px;
+  padding-top: 3px;
+  overflow: hidden;
+  &__container {
+    padding-top: $padding_default;
+    padding-bottom: $padding_default;
+    height: 100%;
+  }
+}
+
+.header__col {
+  h3 {
+    margin: 0 0 15px;
+  }
+}
+
+.address {
+  &__title {
+    padding: 0;
+    color: $default_color;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 600;
+    text-transform: uppercase;
+    .fa {
+      padding-right: 10px;
+      color: #9f9f9f;
+      font-size: 18px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
+  &__text {
+    color: #000000;
+    font-size: 12px;
+    font-weight: 400;
+    padding-left: 20px;
+  }
+}
+
+.call {
+  &__box {
+    padding-left: 0;
+  }
+  &__title {
+    padding: 0;
+    color: $default_color;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 600;
+    text-transform: uppercase;
+    .fa {
+      padding-right: 10px;
+      color: #9f9f9f;
+      font-size: 18px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
+  &__list {
+    padding-left: 20px;
+    &__red {
+      color: $default_color;
+      font-weight: 400;
+    }
+    &__bold {
+      font-weight: 700;
+    }
+    li {
+      a {
+        font-size: 18px;
+        text-decoration: none;
+        color: #242424;
+      }
+    }
+  }
+
+}
+
+.working_hours {
+  text-align: right;
+  color: $default_color;
+  padding-top: 13px;
+  &__time {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    &__black {
+      color: $black;
+    }
+  }
+  &__whole_week {
+    font-size: 31px;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+}
+
+.socials_icons {
+  &__title {
+    text-align: right;
+    color: $default_color;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 15px 0 0!important;
+  }
+  &__list {
+    display: flex;
+    justify-content: flex-end;
+    li {
+      a {
+        padding-left: 15px;
+        &:hover {
+          .fa {
+            color: $default_color;
+          }
+        }
+        .fa {
+          color: #9f9f9f;
+          font-size: 30px;
+          font-weight: 400;
+          transition: color 0.2s ease-in
+        }
+      }
+    }
+  }
+}
+
+.section_line {
+  width: 100%;
+  height: 3px;
+  display: flex;
+  justify-content: flex-start;
+  &.top {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &.bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .color {
+    width: 25%;
+    height: 100%;
+    &:nth-child(1) {
+      background: $yellow;
+    }
+    &:nth-child(2) {
+      background: $orange;
+    }
+    &:nth-child(3) {
+      background: $magenta;
+    }
+    &:nth-child(4) {
+      background: $purple;
+    }
+
+  }
+}

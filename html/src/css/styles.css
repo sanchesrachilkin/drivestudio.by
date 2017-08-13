@@ -1,0 +1,185 @@
+.header {
+  position: relative;
+  height: 120px;
+  padding-top: 3px;
+  overflow: hidden;
+}
+
+.header__container {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  height: 100%;
+}
+
+.header__col h3 {
+  margin: 0 0 15px;
+}
+
+.address__title {
+  padding: 0;
+  color: #cd004d;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.address__title .fa {
+  padding-right: 10px;
+  color: #9f9f9f;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.address__text {
+  color: #000000;
+  font-size: 12px;
+  font-weight: 400;
+  padding-left: 20px;
+}
+
+.call__box {
+  padding-left: 0;
+}
+
+.call__title {
+  padding: 0;
+  color: #cd004d;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.call__title .fa {
+  padding-right: 10px;
+  color: #9f9f9f;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.call__list {
+  padding-left: 20px;
+}
+
+.call__list__red {
+  color: #cd004d;
+  font-weight: 400;
+}
+
+.call__list__bold {
+  font-weight: 700;
+}
+
+.call__list li a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #242424;
+}
+
+.working_hours {
+  text-align: right;
+  color: #cd004d;
+  padding-top: 13px;
+}
+
+.working_hours__time {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.working_hours__time__black {
+  color: #000;
+}
+
+.working_hours__whole_week {
+  font-size: 31px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.socials_icons__title {
+  text-align: right;
+  color: #cd004d;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 15px 0 0 !important;
+}
+
+.socials_icons__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.socials_icons__list li a {
+  padding-left: 15px;
+}
+
+.socials_icons__list li a:hover .fa {
+  color: #cd004d;
+}
+
+.socials_icons__list li a .fa {
+  color: #9f9f9f;
+  font-size: 30px;
+  font-weight: 400;
+  -webkit-transition: color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+}
+
+.section_line {
+  width: 100%;
+  height: 3px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.section_line.top {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.section_line.bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.section_line .color {
+  width: 25%;
+  height: 100%;
+}
+
+.section_line .color:nth-child(1) {
+  background: #f5c300;
+}
+
+.section_line .color:nth-child(2) {
+  background: #eb7418;
+}
+
+.section_line .color:nth-child(3) {
+  background: #cd004d;
+}
+
+.section_line .color:nth-child(4) {
+  background: #6d559f;
+}

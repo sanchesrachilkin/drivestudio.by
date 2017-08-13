@@ -8,16 +8,18 @@ var gulp         = require('gulp'),
     jade         = require('gulp-jade'),
     cssnano      = require('gulp-cssnano'),
     rename       = require('gulp-rename'),
-    del          = require('del');
+    del          = require('del'),
+    autoprefixer = require('gulp-autoprefixer');
 
 
 gulp.task('cleanCss', function() {
     return del.sync('src/css');
 });
 
-gulp.task('sass', ['cleanCss'], function(){
+gulp.task('sass', function(){
    return gulp.src('src/sass/**/*.scss')
        .pipe(sass({outputStyle: 'expanded'}))
+       .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
        .pipe(gulp.dest('src/css'))
        .pipe(browserSync.reload({stream: true}))
 });
@@ -31,11 +33,21 @@ gulp.task('browserSync', function() {
     })
 });
 
+gulp.task('css-libs', ['sass'], function() {
+    return gulp.src('src/libs/**/*.css')
+        .pipe(cssnano())
+        .pipe(concat('libs.css'))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('src/css/libs'));
+
+});
+
+
 gulp.task('clean', function() {
     return del.sync('dist');
 });
 
-gulp.task('watch',['browserSync', 'sass'], function () {
+gulp.task('watch',['browserSync', 'cleanCss', 'sass', 'css-libs' ], function () {
     gulp.watch('src/sass/**/*.scss', ['sass']);
     gulp.watch('src/**/*.html', browserSync.reload);
     gulp.watch('src/js/**/*.js', browserSync.reload);

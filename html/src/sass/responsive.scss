@@ -1,9 +1,31 @@
 @import "_mixin.scss";
 @import "_vars.scss";
 
-
-@media only screen and (min-width: $min-large) {
-  div {
-    display: block;
+@media only screen and (max-width: $phone-min) {
+  .container {
+    width: 100%;
   }
 }
+
+@media only screen and (min-width: $table-min) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media only screen and (min-width: $max-middle) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media only screen and (min-width: $min-large) {
+  .container {
+    width: 1170px;
+  }
+}
+
+
+
+
+

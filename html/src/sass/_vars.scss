@@ -1,3 +1,18 @@
+//Padding for container
+
+$padding_default: 15px;
+
+
+//Colors
+
+$yellow: #f5c300;
+$orange: #eb7418;
+$magenta: #cd004d;
+$purple: #6d559f;
+$black: #000;
+
+$default_color: $magenta;
+
 // ==================== Responsive breakpoint
 
 // Large responsive
@@ -7,10 +22,10 @@ $min-middle: $min-large - 1;
 // Middle responsive
 $max-middle: 992px;
 $table-max: $max-middle -1;
-$table-max: 768px;
+$table-min: 768px;
 
 // Small responsive
-$phone-max: $table-max - 1;
+$phone-max: $table-min - 1;
 $phone-min: 480px;
 $min-responsive: 320px;
 
