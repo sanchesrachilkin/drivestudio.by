@@ -38,15 +38,17 @@ gulp.task('browserSync', function() {
 
 
 gulp.task('scripts', function() {
-    return gulp.src([ // Берем все необходимые библиотеки
-        'src/libs/slick-carousel/slick/slick.js', // Slick
-        'src/libs/jQuery.dotdotdot/src/jquery.dotdotdot.js', // DOtDotDot
+    return gulp.src([
+        'src/libs/slick-carousel/slick/slick.js',
+        'src/libs/jQuery.dotdotdot/src/jquery.dotdotdot.js',
         'src/libs/jquery-touchswipe/jquery.touchSwipe.js',
-        'src/libs/fancybox/dist/jquery.fancybox.js'
+        'src/libs/fancybox/dist/jquery.fancybox.js',
+        'src/libs/parallax.js/parallax.js',
+        'src/libs/jquery.maskedinput/dist/jquery.maskedinput.js'
     ])
-        .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
-        .pipe(uglify()) // Сжимаем JS файл
-        .pipe(gulp.dest('src/js/libs')); // Выгружаем в папку app/js
+        .pipe(concat('libs.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('src/js/libs'));
 });
 
 

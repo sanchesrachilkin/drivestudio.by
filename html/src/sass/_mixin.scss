@@ -1,0 +1,22 @@
+@mixin placeholder($placeholder_font_style, $placeholder_font_size, $placeholder_color){
+  &::-webkit-input-placeholder {
+    font-style: $placeholder_font_style;
+    font-size: $placeholder_font_size;
+    color: $placeholder_color;
+  }
+  &::-moz-placeholder {
+    font-style: $placeholder_font_style;
+    font-size: $placeholder_font_size;
+    color: $placeholder_color;
+  }
+  &:-moz-placeholder {
+    font-style: $placeholder_font_style;
+    font-size: $placeholder_font_size;
+    color: $placeholder_color;
+  }
+  &:-ms-input-placeholder {
+    font-style: $placeholder_font_style;
+    font-size: $placeholder_font_size;
+    color: $placeholder_color;
+  }
+}

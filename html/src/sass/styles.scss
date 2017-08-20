@@ -254,7 +254,8 @@
         position: absolute;
         left: 0;
         bottom: 0;
-        height: 240px;
+        height: auto;
+        padding: $padding_default * 2 0 $padding_default + 5;
         width: 100%;
         background: rgba(0, 0, 0, 0.5);
         .container {
@@ -290,3 +291,243 @@
   }
 }
 /* ======== BIG SLIDER END ========= */
+/* =========== PROGRAMS =========== */
+.programs {
+  &__row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 -15px -30px;
+  }
+
+  &__col {
+    width: 25%;
+    padding: 0 15px;
+    margin: 0 0 30px;
+  }
+  
+  &__link {
+    text-decoration: none;
+  }
+
+  &__item {
+    border: 1px solid $border_color_cards;
+    background: $default_color;
+    &.default_bg {
+      background: $default_color;
+      .programs__img {
+        &:before {
+          background: $default_color;
+        }
+      }
+    }
+    &.orange_bg {
+      background: $orange;
+      .programs__img {
+        &:before {
+          background: $orange;
+        }
+      }
+    }
+    &.purple_bg {
+      background: $purple;
+      .programs__img {
+        &:before {
+          background: $purple;
+        }
+      }
+    }
+    &.green_bg {
+      background: $green;
+      .programs__img {
+        &:before {
+          background: $green;
+        }
+      }
+    }
+    &.blue_bg {
+      background: $blue;
+      .programs__img {
+        &:before {
+          background: $blue;
+        }
+      }
+    }
+
+    &:hover {
+      .programs__img {
+        &:before {
+          opacity: 0.8;
+        }
+
+        &:after {
+          top: 50%;
+        }
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 207px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    &:before {
+      content: ' ';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: $default_color;
+      opacity: 0;
+      z-index: 2;
+      transition: opacity 150ms ease-in;
+    }
+    &:after {
+      content: 'Подробнее';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -10%;
+      transform: translateY(-50%);
+      width: 40%;
+      display: inline-block;
+      height: 30px;
+      line-height: 30px;
+      padding: 0 10px;
+      margin: 0 auto;
+      border: 1px solid #fff;
+      color: #fff;
+      z-index: 3;
+      transition: all 150ms ease-in;
+      font-size: 16px;
+    }
+    img {
+      filter: grayscale(30%);
+      transition: all 150ms ease-in;
+    }
+  }
+
+  &__title {
+    height: 32px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 32px;
+    padding: 0 10px;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-decoration: none;
+  }
+}
+/* ========= PROGRAMS END ========= */
+/* ======= APPLICATION FORM ======= */
+.application_form {
+  position: relative;
+  height: auto;
+  &__bg {
+    height: 505px;
+    padding: 30px 0;
+    background: transparent;
+  }
+  &__box {
+    display: block;
+    height: 100%;
+    background: rgba(0, 0, 0, .31);
+    padding: 15px 10%;
+  }
+  &__container {
+    height: 100%;
+  }
+  &__header {
+    margin-top: 0;
+    text-align: center;
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+  &__inputs_row {
+    margin-bottom: 30px;
+  }
+}
+/* ===== APPLICATION FORM END ==== */
+
+/* ======== PHOTO GALLERY  ======= */
+.photos_main {
+  &__img {
+    overflow: hidden;
+    height: 169px;
+    img {
+      max-width: 100%;
+      height: auto;
+
+    }
+  }
+  &__cover_button {
+    text-align: center;
+    a {
+      margin: 0;
+    }
+  }
+  &__col {
+    margin-bottom: 30px;
+  }
+}
+/* ========== PHOTO END  ========= */
+
+.footer {
+  &__bg {
+    height: 93px;
+    background: #1b1b1b;
+    position: relative;
+  }
+  &__left {
+    text-align: left;
+    padding-top: 25px;
+  }
+
+  &__right {
+    text-align: right;
+    padding-top: 25px;
+  }
+  &__copyright {
+    margin-bottom: 3px;
+  }
+  &__copyright, &__warning {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  &__phones {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 3px;
+    &__red {
+      color: #be0042;
+      font-weight: 400;
+    }
+    &__bold {
+      font-weight: 700;
+    }
+    li {
+      margin-left: 15px;
+      a {
+        font-size: 14px;
+        color: #fefefe;
+        font-weight: 600;
+        text-decoration: none;
+      }
+    }
+  }
+  &__address {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}

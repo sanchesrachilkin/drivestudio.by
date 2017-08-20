@@ -9,17 +9,27 @@
 
     <!-- Google fonts Open Sans -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+    <!-- Google fonts Roboto -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&amp;subset=cyrillic" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Slick Slider -->
     <link href="css/slick/slick.css" rel="stylesheet">
     <link href="css/slick/slick-theme.css" rel="stylesheet">
     <!-- Styles -->
+
+    <!-- Fancybox styles -->
+    <link rel="stylesheet" href="css/">
     <link href="css/common.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <!-- Responsive styles -->
     <link href="css/responsive.css" rel="stylesheet">
 
+    <script>
+        window.onload = function() {
+            document.body.classList.add('loaded');
+        };
+    </script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -28,6 +38,14 @@
     <![endif]-->
 </head>
 <body>
+<noscript>
+    <div class="noscript">
+    <span class="noscript__message">
+        Ошибка! Ваш браузер не поддерживает JavaScript!<br>
+        <a href="https://yandex.ru/support/common/browsers-settings/browsers-java-js-settings.html" target="_blank" class="button_default">Подробнее</a>
+    </span>
+    </div>
+</noscript>
     <header class="header">
         <div class="section_line top">
             <div class="color"></div>
@@ -83,7 +101,7 @@
                         <a href="#">Главная</a>
                     </li>
                     <li class="main_menu__item">
-                        <a href="#">Наши педагоги</a>
+                        <a href="#">Наши программы</a>
                         <ul class="main_menu__submenu">
                             <li class="main_menu__submenu__item"><a href="#">Гитара</a></li>
                             <li class="main_menu__submenu__item"><a href="#">Вокал</a></li>
@@ -91,7 +109,7 @@
                         </ul>
                     </li>
                     <li class="main_menu__item">
-                        <a href="#">Видео</a>
+                        <a href="#">Мероприятия</a>
                     </li>
                     <li class="main_menu__item">
                         <a href="#">Стоимость обучения</a>
@@ -114,18 +132,60 @@
            <div class="big_slider__item">
                <div class="big_slider__item__cover">
                    <img src="images/big_slider/1.jpg" alt="1">
+                   <div class="big_slider__item__cover__text">
+                       <div class="container">
+                           <div class="big_slider__item__cover__text__box">
+                               <div class="big_slider__item__cover__text__table">
+                                   <h3 class="big_slider__item__cover__text__header">Хочешь научитьмя играть на гитаре?</h3>
+                                   <div class="big_slider__item__cover__text__description">
+                                       Опытнейшие педагоги города помогут тебе осуществить мечту. <br>
+                                       Не откладывайте на завтра, то что можно сделать сегодня! Ты можешь все!
+                                   </div>
+                                   <a href="#" class="big_slider__item__cover__text__button button_default">Узнать подробнее</a>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
                </div>
            </div>
 
            <div class="big_slider__item">
                <div class="big_slider__item__cover">
                    <img src="images/big_slider/2.jpg" alt="1">
+                   <div class="big_slider__item__cover__text">
+                       <div class="container">
+                           <div class="big_slider__item__cover__text__box">
+                               <div class="big_slider__item__cover__text__table">
+                                   <h3 class="big_slider__item__cover__text__header">Хочешь научитьмя играть на гитаре?</h3>
+                                   <div class="big_slider__item__cover__text__description">
+                                       Опытнейшие педагоги города помогут тебе осуществить мечту. <br>
+                                       Не откладывайте на завтра, то что можно сделать сегодня! Ты можешь все!
+                                   </div>
+                                   <a href="#" class="big_slider__item__cover__text__button button_default">Узнать подробнее</a>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
                </div>
            </div>
 
            <div class="big_slider__item">
                <div class="big_slider__item__cover">
                    <img src="images/big_slider/3.jpg" alt="1">
+                   <div class="big_slider__item__cover__text">
+                       <div class="container">
+                           <div class="big_slider__item__cover__text__box">
+                               <div class="big_slider__item__cover__text__table">
+                                   <h3 class="big_slider__item__cover__text__header">Хочешь научитьмя играть на гитаре?</h3>
+                                   <div class="big_slider__item__cover__text__description">
+                                       Опытнейшие педагоги города помогут тебе осуществить мечту. <br>
+                                       Не откладывайте на завтра, то что можно сделать сегодня! Ты можешь все!
+                                   </div>
+                                   <a href="#" class="big_slider__item__cover__text__button button_default">Узнать подробнее</a>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
                </div>
            </div>
        </div>
@@ -136,6 +196,229 @@
             <div class="color"></div>
         </div>
     </section>
+    <section class="programs content_section">
+        <div class="container programs__container">
+            <h2 class="programs__header content_section__header">Наши программы</h2>
+            <div class="programs__body">
+                <div class="programs__row">
+                    <div class="programs__col">
+                        <a href="#" class="programs__link">
+                            <div class="programs__item default_bg">
+                            <div class="programs__img">
+                                <img src="images/programs/1.jpg" alt="1">
+                            </div>
+                            <div class="programs__title">Гитара</div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="programs__col">
+                        <a href="#" class="programs__link">
+                            <div class="programs__item orange_bg">
+                                <div class="programs__img">
+                                    <img src="images/programs/2.jpg" alt="1">
+                                </div>
+                                <div class="programs__title">Фортепиано</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="programs__col">
+                        <a href="#" class="programs__link">
+                            <div class="programs__item purple_bg">
+                                <div class="programs__img">
+                                    <img src="images/programs/3.jpg" alt="1">
+                                </div>
+                                <div class="programs__title">Вокал</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="programs__col">
+                        <a href="#" class="programs__link">
+                            <div class="programs__item green_bg">
+                                <div class="programs__img">
+                                    <img src="images/programs/4.jpg" alt="1">
+                                </div>
+                                <div class="programs__title">Арт-студия (выходного дня)</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="programs__col">
+                        <a href="#" class="programs__link">
+                            <div class="programs__item blue_bg">
+                                <div class="programs__img">
+                                    <img src="images/programs/5.jpg" alt="1">
+                                </div>
+                                <div class="programs__title">Оркестровое мастерство</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="programs__col">
+                        <a href="#" class="programs__link">
+                            <div class="programs__item default_bg">
+                                <div class="programs__img">
+                                    <img src="images/programs/6.jpg" alt="1">
+                                </div>
+                                <div class="programs__title">музыкальная азбука</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="application_form">
+        <div class="section_line top">
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+        </div>
+            <div class="application_form__bg">
+                <div class="container application_form__container">
+                    <div class="application_form__box">
+                        <h2 class="application_form__header">Заполнить анкету</h2>
+                        <form method="get" action="/">
+                            <div class="row application_form__inputs_row">
+                                <div class="col-lg-4">
+                                    <div class="input_cover">
+                                        <input type="text" name="name" id="name" placeholder="Ф.И.О.">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="input_cover">
+                                        <input type="text" name="phone" id="phone" placeholder="Ваш номер телефона">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="input_cover">
+                                        <input type="text" name="subject" id="subject" placeholder="Чем вы хотите заниматься у нас?">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="textarea_cover">
+                                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Введите текст сообщения"></textarea>
+                                    </div>
+                                    <div class="button_cover">
+                                        <button type="submit" class="button_default">Отправить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        <div class="section_line bottom">
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+        </div>
+    </section>
+    <section class="photos_main content_section">
+        <div class="container">
+            <h2 class="photos_main__header content_section__header">Фото</h2>
+            <div class="row photos_main__row">
+                <div class="col-lg-3 photos_main__col">
+                    <div class="photos_main__img">
+                        <img src="images/photos/1.jpg" alt="1">
+                    </div>
+                </div>
+                <div class="col-lg-3 photos_main__col">
+                    <div class="photos_main__img">
+                        <img src="images/photos/2.jpg" alt="1">
+                    </div>
+                </div>
+                <div class="col-lg-3 photos_main__col">
+                    <div class="photos_main__img">
+                        <img src="images/photos/3.jpg" alt="1">
+                    </div>
+                </div>
+                <div class="col-lg-3 photos_main__col">
+                    <div class="photos_main__img">
+                        <img src="images/photos/4.jpg" alt="1">
+                    </div>
+                </div>
+                <div class="col-lg-3 photos_main__col">
+                    <div class="photos_main__img">
+                        <img src="images/photos/5.jpg" alt="1">
+                    </div>
+                </div>
+                <div class="col-lg-3 photos_main__col">
+                    <div class="photos_main__img">
+                        <img src="images/photos/6.jpg" alt="1">
+                    </div>
+                </div>
+                <div class="col-lg-3 photos_main__col">
+                    <div class="photos_main__img">
+                        <img src="images/photos/7.jpg" alt="1">
+                    </div>
+                </div>
+                <div class="col-lg-3 photos_main__col">
+                    <div class="photos_main__img">
+                        <img src="images/photos/8.jpg" alt="1">
+                    </div>
+                </div>
+                <div class="col-lg-3 photos_main__col">
+                    <div class="photos_main__img">
+                        <img src="images/photos/1.jpg" alt="1">
+                    </div>
+                </div>
+                <div class="col-lg-3 photos_main__col">
+                    <div class="photos_main__img">
+                        <img src="images/photos/2.jpg" alt="1">
+                    </div>
+                </div>
+                <div class="col-lg-3 photos_main__col">
+                    <div class="photos_main__img">
+                        <img src="images/photos/3.jpg" alt="1">
+                    </div>
+                </div>
+                <div class="col-lg-3 photos_main__col">
+                    <div class="photos_main__img">
+                        <img src="images/photos/4.jpg" alt="1">
+                    </div>
+                </div>
+                <div class="col-lg-3 photos_main__col">
+                    <div class="photos_main__img">
+                        <img src="images/photos/5.jpg" alt="1">
+                    </div>
+                </div>
+                <div class="col-lg-3 photos_main__col">
+                    <div class="photos_main__img">
+                        <img src="images/photos/6.jpg" alt="1">
+                    </div>
+                </div>
+                <div class="col-lg-3 photos_main__col">
+                    <div class="photos_main__img">
+                        <img src="images/photos/7.jpg" alt="1">
+                    </div>
+                </div>
+                <div class="col-lg-3 photos_main__col">
+                    <div class="photos_main__img">
+                        <img src="images/photos/8.jpg" alt="1">
+                    </div>
+                </div>
+            </div>
+            <div class="photos_main__cover_button">
+                <a href="#" class="button_default">Смотреть все фото</a>
+            </div>
+        </div>
+        <div class="section_line bottom">
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+        </div>
+    </section>
+<div class="loader">
+    <div class="cssload-thecube">
+        <div class="cssload-cube cssload-c1"></div>
+        <div class="cssload-cube cssload-c2"></div>
+        <div class="cssload-cube cssload-c4"></div>
+        <div class="cssload-cube cssload-c3"></div>
+    </div>
+</div>
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/libs/libs.min.js"></script>
