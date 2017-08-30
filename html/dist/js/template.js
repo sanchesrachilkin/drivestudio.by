@@ -3,6 +3,7 @@
         slidersInit();
         parallax();
         maskedPhone();
+        fancyBoxInit();
     });
 
 
@@ -20,12 +21,17 @@
     };
 
     var parallax = function() {
-        $('.application_form__bg').parallax({imageSrc: '../images/application_form_bg/bg.jpg'});
+        $('.application_form__bg').parallax();
     };
 
     var maskedPhone = function() {
         $("#phone").mask("+375 (99) 999-99-99");
     };
+
+
+    var fancyBoxInit = function() {
+        $("[data-fancybox]").fancybox();
+    }
 
 })(jQuery);
 
