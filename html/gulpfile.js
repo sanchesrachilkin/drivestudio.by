@@ -44,7 +44,8 @@ gulp.task('scripts', function() {
         'src/libs/jquery-touchswipe/jquery.touchSwipe.js',
         'src/libs/fancybox/dist/jquery.fancybox.js',
         'src/libs/parallax.js/parallax.js',
-        'src/libs/jquery.maskedinput/dist/jquery.maskedinput.js'
+        'src/libs/jquery.maskedinput/dist/jquery.maskedinput.js',
+        'src/libs/jquery-touchswipe/jquery.touchSwipe.js'
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())

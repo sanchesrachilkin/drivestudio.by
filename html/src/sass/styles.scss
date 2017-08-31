@@ -9,6 +9,11 @@
   padding-top: 3px;
   padding-bottom: $padding_default;
   overflow: hidden;
+  .section_line {
+    &.bottom {
+      display: none;
+    }
+  }
   &__container {
     padding-top: $padding_default;
     height: 100%;
@@ -514,6 +519,7 @@
 .bread_crumbs {
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
   padding: 15px 0;
   li {
     padding: 0 15px 0 0;

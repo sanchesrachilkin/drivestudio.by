@@ -8,6 +8,10 @@
   overflow: hidden;
 }
 
+.header .section_line.bottom {
+  display: none;
+}
+
 .header__container {
   padding-top: 15px;
   height: 100%;
@@ -215,23 +219,6 @@
   margin-left: -20px;
 }
 
-.main_menu__item:hover {
-  background-color: #cd004d;
-}
-
-.main_menu__item:hover a {
-  color: #fff;
-}
-
-.main_menu__item:hover .main_menu__submenu {
-  -webkit-transform: scaleY(1);
-      -ms-transform: scaleY(1);
-          transform: scaleY(1);
-  -webkit-transition: all 150ms ease-in;
-  -o-transition: all 150ms ease-in;
-  transition: all 150ms ease-in;
-}
-
 .main_menu__item a {
   display: block;
   width: 100%;
@@ -261,6 +248,8 @@
   min-width: 100%;
   display: inline-block;
   z-index: 3;
+  -webkit-box-shadow: 6px 6px 14px -1px rgba(0, 0, 0, 0.28);
+          box-shadow: 6px 6px 14px -1px rgba(0, 0, 0, 0.28);
 }
 
 .main_menu__submenu__item {
@@ -421,14 +410,6 @@
 
 .programs__item.blue_bg .programs__img:before {
   background: #008ad2;
-}
-
-.programs__item:hover .programs__img:before {
-  opacity: 0.8;
-}
-
-.programs__item:hover .programs__img:after {
-  top: 50%;
 }
 
 .programs__img {
@@ -626,4 +607,82 @@
   color: #ffffff;
   font-size: 14px;
   font-weight: 400;
+}
+
+.bread_crumbs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  padding: 15px 0;
+}
+
+.bread_crumbs li {
+  padding: 0 15px 0 0;
+  margin-right: 10px;
+  position: relative;
+  font-size: 12px;
+}
+
+.bread_crumbs li:after {
+  position: absolute;
+  right: -4px;
+  content: '—';
+}
+
+.bread_crumbs li a {
+  font-size: 12px;
+}
+
+.bread_crumbs li:last-child:after {
+  display: none;
+}
+
+.page_header {
+  margin: 0 0 30px 0;
+  line-height: 1;
+}
+
+.content__container {
+  padding-bottom: 30px;
+}
+
+.content_page_menu__header {
+  width: 100%;
+  height: 40px;
+  background: #cd004d;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+}
+
+.content_page_menu__body {
+  padding: 15px 0;
+}
+
+.content_page_menu__body li {
+  display: block;
+  padding-bottom: 5px;
+}
+
+.content_page_menu__body li.active a {
+  color: #cd004d;
+  text-decoration: underline;
+}
+
+.content_page_menu__body li a {
+  color: #5e5667;
+  text-decoration: none;
+}
+
+.content_page_menu__body li a:hover {
+  color: #cd004d;
+  text-decoration: underline;
 }

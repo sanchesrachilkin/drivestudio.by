@@ -456,6 +456,10 @@ body {
   background-color: #fff;
 }
 
+body.burger_open {
+  overflow: hidden;
+}
+
 body.burger_open .main_menu {
   margin-left: 0;
 }
@@ -1600,7 +1604,7 @@ a:focus {
   background: #cd004d;
   position: fixed;
   left: 0;
-  top: 130px;
+  top: 127px;
   z-index: 1000;
   padding: 8px;
   -webkit-transition: all 150ms ease-in;

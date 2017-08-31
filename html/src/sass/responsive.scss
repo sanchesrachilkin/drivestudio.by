@@ -104,6 +104,7 @@
     background: #f6f6f6;
     margin-left: -$mobileMenuWidth;
     transition: margin-left 150ms ease-in;
+    overflow-y: auto;
     &__submenu {
       display: block;
       transform: scaleY(0);
@@ -185,12 +186,6 @@
     &__title {
       font-size: 11px;
     }
-
-    .section_line {
-      .top {
-        display: none;
-      }
-    }
   }
 
   .big_slider {
@@ -252,6 +247,44 @@
   .button_cover {
     margin-top: 15px;
   }
+
+  .content_page_menu__body {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    li {
+      margin: 0 10px 10px;
+      &.active {
+        a {
+          background: #f6f6f6;
+          color: $default_color;
+          text-decoration: none;
+          &:hover {
+            color: $default_color;
+            text-decoration: none;
+          }
+          &:focus {
+            color: $default_color;
+            text-decoration: none;
+          }
+        }
+      }
+      a {
+        display: inline-block;
+        background: $default_color;
+        padding: 5px 10px;
+        color: #fff;
+        &:hover {
+          color: #fff;
+          text-decoration: none;
+        }
+        &:focus {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
   
   .footer {
     &__left, &__right {
@@ -272,6 +305,12 @@
         margin: 0 10px;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 815px) {
+  .bread_crumbs {
+    padding-left: 40px;
   }
 }
 
@@ -350,10 +389,10 @@
 }
 
 @media only screen and (max-width: 660px) {
-  .programs {
+  .header {
     .section_line {
-      .top {
-        display: block;
+      &.bottom {
+        display: flex;
       }
     }
   }
@@ -392,6 +431,18 @@
     }
   }
 
+}
+
+@media only screen and (max-width: 582px) {
+  .photos_main {
+    &__col {
+      width: 100%;
+      text-align: center;
+      &:nth-child(odd){
+        text-align: center;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 599px) {
@@ -456,18 +507,6 @@
 
     &__bg {
       height: 551px;
-    }
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .photos_main {
-    &__col {
-      width: 100%;
-      text-align: center;
-      &:nth-child(odd){
-        text-align: center;
-      }
     }
   }
 }

@@ -468,6 +468,7 @@ body {
   background-color: #fff;
 
   &.burger_open {
+    overflow: hidden;
     .main_menu {
       margin-left: 0;
       &__container {
@@ -1524,7 +1525,7 @@ a {
   background: $default_color;
   position: fixed;
   left: 0;
-  top: 130px;
+  top: 127px;
   z-index: 1000;
   padding: 8px;
   transition: all 150ms ease-in;

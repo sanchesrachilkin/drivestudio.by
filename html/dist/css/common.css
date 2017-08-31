@@ -456,10 +456,65 @@ body {
   background-color: #fff;
 }
 
+body.burger_open {
+  overflow: hidden;
+}
+
+body.burger_open .main_menu {
+  margin-left: 0;
+}
+
+body.burger_open .main_menu__container nav {
+  visibility: visible;
+  opacity: 1;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-transition: margin-left 150ms ease-in;
+  -o-transition: margin-left 150ms ease-in;
+  transition: margin-left 150ms ease-in;
+}
+
+.header {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+.content {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.footer {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
 ol, ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+p {
+  display: block;
+  margin: 0 0 15px 0;
 }
 
 a {
@@ -1199,6 +1254,10 @@ a:focus {
   }
 }
 
+.container {
+  min-width: 320px;
+}
+
 .load_slider {
   opacity: 0;
   -webkit-transition: opacity 0.2s ease-in;
@@ -1536,4 +1595,71 @@ a:focus {
 
 .button_cover button {
   margin: 0;
+}
+
+.burger_button {
+  display: none;
+  width: 40px;
+  height: 40px;
+  background: #cd004d;
+  position: fixed;
+  left: 0;
+  top: 127px;
+  z-index: 1000;
+  padding: 8px;
+  -webkit-transition: all 150ms ease-in;
+  -o-transition: all 150ms ease-in;
+  transition: all 150ms ease-in;
+}
+
+.burger_button.open {
+  left: 230px;
+}
+
+.burger_button.open .burger_button__icon__line {
+  opacity: 0;
+  position: absolute;
+}
+
+.burger_button.open .burger_button__icon__line:first-child {
+  opacity: 1;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.burger_button.open .burger_button__icon__line:last-child {
+  opacity: 1;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.burger_button__icon {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+
+.burger_button__icon__line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  -webkit-transition: all 150ms ease-in;
+  -o-transition: all 150ms ease-in;
+  transition: all 150ms ease-in;
 }

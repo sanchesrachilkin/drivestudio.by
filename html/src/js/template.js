@@ -14,8 +14,8 @@
             arrows: false,
             slidesToShow: 1,
             slidesToScroll: 1,
-            // autoplay: true,
-            // autoplaySpeed: 2000,
+            autoplay: true,
+            autoplaySpeed: 2000,
             adaptiveHeight: true,
             fade: true
         });
@@ -26,7 +26,7 @@
     };
 
     var maskedPhone = function() {
-        $("#phone").mask("+375 (99) 999-99-99");
+        $("#phone").mask("+375(99)999-99-99");
     };
 
 
@@ -41,7 +41,7 @@
         });
 
         function addButtonMenu() {
-            if ($(window).width() < 1199) {
+            if ($(window).width() <= 1199) {
                 $('.main_menu > li').each(function() {
                     if ($(this).children('ul').length != 0 && $(this).children('i.fa').length == 0){
                         $(this).addClass('has_submenu').append('<i class="fa fa-plus-square-o"></i>');
@@ -59,6 +59,26 @@
             }
             else {
                 $(this).removeClass('fa-minus-plus-o').addClass('fa-plus-square-o');
+            }
+        });
+
+        $('.main_menu__container nav').on('click', function() {
+            if($('body').hasClass('burger_open')) {
+                $('body').removeClass('burger_open');
+                $('.burger_button').removeClass('open');
+            }
+        });
+
+        $('.main_menu').on('click', function() {
+            event.stopPropagation();
+        });
+
+        // Close swipe to left
+        $(".main_menu").swipe( {
+            //Generic swipe handler for all directions
+            swipeLeft:function() {
+                $('body').removeClass('burger_open');
+                $('.burger_button').removeClass('open');
             }
         });
 
