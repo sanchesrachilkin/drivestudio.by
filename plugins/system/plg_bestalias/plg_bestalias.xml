@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.5" type="plugin" group="system">
+    <name>System - Best Alias</name>
+    <author>Dmitriy Kupriynov</author>
+    <creationDate>September 2009</creationDate>
+    <authorEmail>ageent.ua@gmail.com</authorEmail>
+    <authorUrl>http://ageent.ru</authorUrl>
+    <license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
+    <description>Transliterates name title, menu items, categories and sections.</description>
+    <files>
+        <filename plugin="plg_bestalias">plg_bestalias.php</filename>
+        <filename>jquery/ajax_translate.js</filename>
+        <filename>jquery/standart.js</filename>
+        <filename>jquery/joker_ageent.js</filename>
+    </files>
+    
+    
+    <config>
+    <fields name="params">
+        <fieldset name="basic">
+        <field name="on_or_off" type="radio" default="1" label="Identify the source language automatically?" description="If yes then the original language will be determined by googla automatically, if not, the source language is the language that is used by default on the site.">
+            <option value="0">Not</option>
+            <option value="1">Yes</option>
+        </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

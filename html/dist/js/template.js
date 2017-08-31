@@ -73,6 +73,15 @@
             event.stopPropagation();
         });
 
+        // Close swipe to left
+        $(".main_menu").swipe( {
+            //Generic swipe handler for all directions
+            swipeLeft:function() {
+                $('body').removeClass('burger_open');
+                $('.burger_button').removeClass('open');
+            }
+        });
+
     }
 
 })(jQuery);
